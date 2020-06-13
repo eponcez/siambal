@@ -75,11 +75,18 @@ if($px<=$npaginas):
 		<td><?php echo $product->barcode; ?></td>
 		<td>
 			<?php if($product->image!=""):?>
-				<img src="storage/products/<?php echo $product->image;?>" style="width:64px;">
+				<img src="storage/products/<?php echo $product->image;?>"	 style="width:64px;">
 			<?php endif;?>
 		</td>
 		<td><?php echo $product->name; ?></td>
+<<<<<<< HEAD
 		<td>S/. <?php echo number_format($product->price_in,2,'.',','); ?></td>
+=======
+
+		<td>S/. <?php echo number_format($product->price_in,2,'.',','); ?></td>
+		<td>$ <?php echo number_format($product->price_in,2,'.',','); ?></td>
+
+>>>>>>> ef07e9a6c52b212df848ae06a41528e3dfa31718
 		<td>S/.	 <?php echo number_format($product->price_out,2,'.',','); ?></td>
 		<td><?php if($product->category_id!=null){echo $product->getCategory()->name;}else{ echo "<center>----</center>"; }  ?></td>
 		<td><?php echo $product->inventary_min; ?></td>
